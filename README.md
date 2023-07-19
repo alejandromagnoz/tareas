@@ -41,21 +41,26 @@ Response Body Tarea
 ## Estructura de directorios
 ```
 /src/main/java/
-/src/main/java/com/nvvoaj/configuration
-/src/main/java/com/nvvoaj/controller
-/src/main/java/com/nvvoaj/exception
-/src/main/java/com/nvvoaj/entity
-/src/main/java/com/nvvoaj/repository
-/src/main/java/com/nvvoaj/service
+/src/main/java/com/nvooaj/configuration
+/src/main/java/com/nvooaj/controller
+/src/main/java/com/nvooaj/exception
+/src/main/java/com/nvooaj/entity
+/src/main/java/com/nvooaj/repository
+/src/main/java/com/nvooaj/service
 /src/main/resources
 
+/src/test/java/
+/src/test/java/com/nvooaj/controller
+
 ```
+## Java
+- 1.8
 
 ## Instalación
-1. Descargar el proyecto desde github:
+1. Descargar el proyecto desde github:https://github.com/alejandromagnoz/tareas
+o crear directorio en en el equipo local y mediante consola de comando ejecutar lo siguiente:
 ```
 git clone https://github.com/alejandromagnoz/tareas.git
-
 
 ```
 
@@ -65,20 +70,18 @@ Las versiones utilizadas están definidas en el archivo pom.xml.
 
 
 ## Ejecución
-Para ejecutar el proyecto, se puede utilizar el IDE o simplemente desde la línea de
-comandos, ejecutar cualquiera de estas opciones:
-
-### Java
-
-```
-#java -jar target/apptarea 0.0.1-SNAPSHOT.jar
-```
-
-### Maven plugin
+- Para ejecutar el proyecto, se puede utilizar el IDE intellij
+- Abrir el proyecto  File --> Open...
+- Esperar que cargue el proyecto y sus dependencias.
+- En la pestaña Maven (lado derecho del Ide) presionar sobre el icono Execute maven goal el siguiente comando
 ```
 mvn spring-boot:run
 ```
-
+- Esperar que compile correctamente y que se inicie Started ApptareaApplication
+- Acceder a Swagger para hacer pruebas o usar postman
+```
+http://localhost:8080/swagger-ui.html
+```
 
 ## Pruebas
 Para ejecutar las pruebas, es necesario ejecutar el comando siguiente:
@@ -89,6 +92,11 @@ mvn test
 ## Base de datos
 Se usa una base de datos embebida h2 en el proyecto
 
+- http://localhost:8080/h2-console
+en la consola en JDBC URL cambiar valor por jdbc:h2:~/test
+- User name: sa
+- Pass (dejar vacio)
+
 
 ## Misceláneo
 
@@ -96,7 +104,7 @@ Se usa una base de datos embebida h2 en el proyecto
 
 | Tipo                             | Nombre    | URL                                               |
 | -------------------------------- | --------- | -------------------------------------------------------------------- |
-| Repositorio de código fuente     | GitHub    | https://github.com/alejandromagnoz/tareas.git|
+| Repositorio de código fuente     | GitHub    | https://github.com/alejandromagnoz/tareas|
 
 
 
